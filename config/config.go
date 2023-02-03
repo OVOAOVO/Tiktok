@@ -46,6 +46,7 @@ var Info Config
 
 // 包初始化加载时候会调用的函数
 func init() {
+	// DecodeFile读取
 	if _, err := toml.DecodeFile("D:\\tiktok\\dousheng\\config\\config.toml", &Info); err != nil {
 		panic(err)
 	}
