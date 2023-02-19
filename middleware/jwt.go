@@ -9,7 +9,7 @@ import (
 	"github.com/models"
 )
 
-var jwtKey = []byte("acking-you.xyz")
+var jwtKey = []byte("LHT-coding")
 
 type Claims struct {
 	UserId int64
@@ -24,8 +24,8 @@ func ReleaseToken(user models.UserLogin) (string, error) {
 		StandardClaims: jwt.StandardClaims{
 			ExpiresAt: expirationTime.Unix(),
 			IssuedAt:  time.Now().Unix(),
-			Issuer:    "douyin_pro_131",
-			Subject:   "L_B__",
+			Issuer:    "LHT",
+			Subject:   "dousheng",
 		}}
 
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
